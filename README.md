@@ -20,7 +20,7 @@ Todo:
 #### Opis:
 Program pobiera wartości odczytywane z modułu DHT11 wysyła do ESP2688, a  następnie wyświetla te wartości na monitorze szeregowym.
 
-#### Połącznie
+#### Połączenie
 
 <img src="https://user-images.githubusercontent.com/76017554/236632357-702b2291-ba73-4080-b369-053c510cb3af.jpg" alt="Schemat połączenia" width="600" height="600">
 
