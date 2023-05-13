@@ -14,14 +14,14 @@ echo "3. Finished adding GPG key!"
 
 echo "4. Updating database with Docker packages from newly added repo..."
 apt-get update
-echo "4. Finished updating dabase with Docker packages from newly added repo!
+echo "4. Finished updating dabase with Docker packages from newly added repo!"
 
 echo "5. Make suring about correct installation of the Docker repo..."
 apt-cache policy docker-ce
 echo "5. Finished!"
 
 echo "6. Installing Docker..."
-apt-get install docker-ce
+apt-get install docker-ce -y
 echo "6. Finished installing docker!"
 
 echo "7. Checking status of the Docker..."
