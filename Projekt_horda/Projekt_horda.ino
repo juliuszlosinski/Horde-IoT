@@ -1,31 +1,3 @@
-## Real-Time Monitoring System (Horde)
-
-This project is created by using ESP32 x 4 and Intel Joule x 1.
-
-![image](https://user-images.githubusercontent.com/72278818/233649310-02c203aa-7e83-4df7-8fe6-4082f65205db.png)
-
-Todo:
-1. Programy (4 x ESP), które mają zdefiniowane:
-- IP urządzenia zdefiniowane,
-- Adres IP routera (sieć),
-- Adres IP Intel Joula + PORT (REST API Python),
-- WYKORZYSTUJEMY CZUJNIKI TEMPERATURY,
-2. Backend w Intel Joule w Pythonie (Flask + Influx)
-- Flask = REST API, czyli:
-- GET = Wszystkie pomiaru,
-- PUT = Dodanie pomiaru,
-- DELETE = Usunięcie pomiaru,
-
-### Program do komunikacji ESP2688 i DHT11
-#### Opis:
-Program pobiera wartości odczytywane z modułu DHT11 wysyła do ESP2688, a  następnie wyświetla te wartości na monitorze szeregowym.
-
-#### Połączenie
-
-<img src="https://user-images.githubusercontent.com/76017554/236632357-702b2291-ba73-4080-b369-053c510cb3af.jpg" alt="Schemat połączenia" width="600" height="600">
-
-#### KOD
-```
 #include <ESP8266WiFi.h>
 #include <DHT.h>
 
@@ -67,5 +39,3 @@ void loop() {
   // Czekaj 2 sekundy przed następnym odczytem
   delay(2000);
 }
-
-```
