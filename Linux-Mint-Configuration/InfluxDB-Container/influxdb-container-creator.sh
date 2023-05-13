@@ -1,13 +1,13 @@
 #! /bin/bash
 
-echo "Updating..."
+echo "1. Updating..."
 apt-get update -y
-echo "Finished updating!"
+echo "1. Finished updating!"
 
-echo "Install docker compose..."
+echo "2. Installing docker compose..."
 apt-get install docker.io -y && apt-get install docker-compose -y
-echo "Finished installing docker compose!"
+echo "2. Finished installing docker compose!"
 
-echo "Creating Horde-influxdb container..."
+echo "3. Creating Horde-influxdb container..."
 docker-compose up
-echo "Horde-Influxdb container created!"
+echo "3. Horde-Influxdb container created!"
