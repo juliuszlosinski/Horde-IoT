@@ -1,1 +1,1 @@
-## You need change the permission of the shell/file script (chmod 777 file_name") before executing!
+## You need change the permission of the shell/file script (chmod 777 file_name) before executing!
