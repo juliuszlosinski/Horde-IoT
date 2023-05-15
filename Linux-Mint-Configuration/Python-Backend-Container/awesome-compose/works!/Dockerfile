@@ -8,4 +8,4 @@ COPY requirements.txt requirements.txt
 RUN pip install -r requirements.txt
 EXPOSE 7007
 COPY . .
-CMD [ "python", "flask_influxdb_backend.py" ]
+CMD [ "python", "app.py" ]
