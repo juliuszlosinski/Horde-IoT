@@ -10,7 +10,7 @@ class InfluxDB_handler:
     Initialzing InfluxDB connection.
     """
     def __init__(self) -> None:
-        f = open("config.json")
+        f = open("influxdb_config.json")
         config_json = json.load(f)
 
         self.token = config_json["token"]
@@ -49,7 +49,6 @@ class InfluxDB_handler:
         return results
 
 influxdb_handler = InfluxDB_handler()
-
 
 app = Flask(__name__)
 
