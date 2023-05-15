@@ -19,24 +19,25 @@ InfluxDB-Container/influxdb-container-creator.sh
 ```sh
 
 chmod 777 Python-Backend-Container/flask-influxdb-backend-container-creator.sh
-
 Python-Backend-Container/flask-influxdb-backend-container-creator.sh
 ```
 
 ## WARNING: File "influxdb_config" must have current IP of InfluxDB container in URL!!!
 
-File "influxdb_config.json" inside Python-Backend-Container:
+File "influxdb_config.json" inside of Python-Backend-Container:
 
 ```json
 {
 	"token": "WFP9nF-1oO7rYnq2vV-_pC3bKWNEZZd9XRN_tpYlBZzxgx35f3hNRLIb8C_6DmTB0Weq9HpCViqOu0FGqYxMvg==",
 	"org": "horde-org",
-	"url": "http://CURRENT_IP_ADDRESS:8086",
+	"url": "http://CURRENT_IP_ADDRESS_OF_INFLUXD_CONTAINER:8086",
 	"bucket": "horde-bucket"
 }
 ```
 
 ### * Available simulation of ESP8266 x 4 in "ESP8266-Simulation" folder:
+
+File "ESP8266_0X_simulation.py" inside of Python-Backend-Container/ESP8266-Simulation:
 
 ```py
 import json
@@ -68,9 +69,15 @@ File  "flask_config.json" inside Python-Backend-Container/ESP8266-Simulation:
 
 ```json
 {
-	"url": "CURRENT_IP_ADDRESS:7007"
+	"url": "CURRENT_IP_ADDRESS_OF_INFLUXD_CONTAINER:7007"
 }
 ```
 ![Screenshot](Flask-InfluxDB-Docker-Working.png)
 ![Screenshot](InfluxDB-Charts.png)
 ![Screenshot](ESP8266-Simulation.png)
+
+## TODO:
+- Set current ip address of InfluxDB container in influxdb_config.json,
+- Set current ip address of InfluxDB container in flask_config.json,
+
+This allows to communication between docker containers!
