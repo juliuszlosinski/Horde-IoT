@@ -1,18 +1,19 @@
-FROM python:3.11
+FROM python:3-alpine
 
-# copy the requirements file into the image
-COPY ./requirements.txt /app/requirements.txt
-
-# switch working directory
+# 1. Creating app directory.
 WORKDIR /app
 
-# install the dependencies and packages in the requirements file
-RUN pip install -r requirements.txt
+# 2. Installing Flask package.
+RUN pip install flask
 
-# copy every content from the local file to the image
-COPY . /app
+# 3. Installing Influxdb-Client package.
+RUN pip install influxdb-client
 
-# configure the container to run in an executed manner
-ENTRYPOINT [ "python" ]
+# 4. Copying all files to docker image.
+COPY . .
 
-CMD ["flask_influxdb_backend.py" ]
+# 5. Exposing backend port.
+EXPOSE 4000
+
+# 6. Starting Flask python backend for InfluxDB.
+CMD ["flask", "--app", "flask_influxdb_backend", "run", "-p", "4000"]

@@ -76,3 +76,6 @@ def add_measurement():
         humidity=humidity
     )
     return '', 204
+
+if __name__ == "__main__":
+    app.run()
