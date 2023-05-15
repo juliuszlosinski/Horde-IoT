@@ -1,16 +1,11 @@
-FROM python:3-alpine
+FROM python:3.6.9-alpine
+WORKDIR /code
 
-# 1. Creating app directory.
-WORKDIR /app
+RUN apk --update --upgrade add --no-cache  gcc musl-dev jpeg-dev zlib-dev libffi-dev cairo-dev pango-dev gdk-pixbuf-dev
 
-# 2. Installing Flask package.
-RUN pip install flask
-
-# 3. Installing Influxdb-Client package.
-RUN pip install influxdb-client
-
-# 4. Copying all files to docker image.
+RUN python -m pip install --upgrade pip
+COPY requirements.txt requirements.txt
+RUN pip install -r requirements.txt
+EXPOSE 7007
 COPY . .
-
-# 5. Exposing backend port.
-EXPOSE 4500
+CMD [ "python", "flask_influxdb_backend.py" ]
