@@ -76,4 +76,3 @@ def add_measurement():
         humidity=humidity
     )
     return '', 204
-
