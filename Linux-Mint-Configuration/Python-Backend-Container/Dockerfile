@@ -13,7 +13,4 @@ RUN pip install influxdb-client
 COPY . .
 
 # 5. Exposing backend port.
-EXPOSE 4000
-
-# 6. Starting Flask python backend for InfluxDB.
-CMD ["flask", "--app", "flask_influxdb_backend", "run", "-p", "4000"]
+EXPOSE 5555
