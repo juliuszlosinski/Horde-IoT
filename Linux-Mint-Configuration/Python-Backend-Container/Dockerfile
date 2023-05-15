@@ -13,4 +13,4 @@ RUN pip install influxdb-client
 COPY . .
 
 # 5. Exposing backend port.
-EXPOSE 5555
+EXPOSE 4500
