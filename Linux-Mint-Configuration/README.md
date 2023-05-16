@@ -10,16 +10,19 @@ DockerEngine-Installer/docker-installer-mint-2.sh
 ### 2. InfluxDB container creation.
 
 ```sh
-chmod 777 InfluxDB-Container/influxdb-container-creator.sh
-InfluxDB-Container/influxdb-container-creator.sh
+cd InfluxDB-Container
+chmod 777 influxdb-container-creator.sh
+./influxdb-container-creator.sh
+cd ..
 ```
 
 ### 3. Python Flask Backend creation.
 
 ```sh
-
-chmod 777 Python-Backend-Container/flask-influxdb-backend-container-creator.sh
-Python-Backend-Container/flask-influxdb-backend-container-creator.sh
+cd Python-Backend-Container
+chmod 777 flask-influxdb-backend-container-creator.sh
+./flask-influxdb-backend-container-creator.sh
+cd ..
 ```
 
 ### 4. InfluxDB-Backend Docker Network creation.
