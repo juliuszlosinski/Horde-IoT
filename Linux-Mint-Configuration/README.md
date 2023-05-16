@@ -3,8 +3,8 @@
 ### 1. Docker on LinuX Mint installation.
 
 ```sh
-chmod 777 docker-installer-mint-2.sh
-./docker-installer-mint-2.sh
+chmod 777 DockerEngine-Installer/docker-installer-mint-2.sh
+DockerEngine-Installer/docker-installer-mint-2.sh
 ```
 
 ### 2. InfluxDB container creation.
@@ -22,7 +22,12 @@ chmod 777 Python-Backend-Container/flask-influxdb-backend-container-creator.sh
 Python-Backend-Container/flask-influxdb-backend-container-creator.sh
 ```
 
-## WARNING: File "influxdb_config" must have current IP of InfluxDB container in URL!!!
+### 4. InfluxDB-Backend Docker Network creation.
+
+```sh
+chmod 777 DockerNetwork-Creator/influxdb-backend-network-creator.sh
+DockerNetwork-Creator/influxdb-backend-network-creator.sh
+```
 
 File "influxdb_config.json" inside of Python-Backend-Container:
 
@@ -34,7 +39,6 @@ File "influxdb_config.json" inside of Python-Backend-Container:
 	"bucket": "horde-bucket"
 }
 ```
-
 ### * Available simulation of ESP8266 x 4 in "ESP8266-Simulation" folder:
 
 File "ESP8266_0X_simulation.py" inside of Python-Backend-Container/ESP8266-Simulation:
@@ -62,9 +66,6 @@ while(True):
     print(response)
     time.sleep(1)
 ```
-
-## WARNING: File "flask_config" must have current IP of InfluxDB container in URL!!!
-
 File  "flask_config.json" inside Python-Backend-Container/ESP8266-Simulation:
 
 ```json
@@ -72,12 +73,7 @@ File  "flask_config.json" inside Python-Backend-Container/ESP8266-Simulation:
 	"url": "CURRENT_IP_ADDRESS_OF_INFLUXD_CONTAINER:7007"
 }
 ```
+
 ![Screenshot](Flask-InfluxDB-Docker-Working.png)
 ![Screenshot](InfluxDB-Charts.png)
 ![Screenshot](ESP8266-Simulation.png)
-
-## TODO:
-- Set current ip address of InfluxDB container in influxdb_config.json,
-- Set current ip address of InfluxDB container in flask_config.json,
-
-This allows to communication between docker containers!
