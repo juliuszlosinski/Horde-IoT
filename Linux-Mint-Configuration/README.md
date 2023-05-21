@@ -18,7 +18,7 @@ cd ..
 
 ### 3. Python Flask Backend creation.
 
-## 3.1 InfluxDB token generation.
+#### 3.1 InfluxDB token generation.
 
 Generating InfluxDB token.
 
@@ -38,7 +38,7 @@ File "influxdb_config.json" inside of Python-Backend-Container:
 }
 ```
 
-## 3.2 Flask-Backend container creation.
+#### 3.2 Flask-Backend container creation.
 
 ```sh
 cd Python-Backend-Container
