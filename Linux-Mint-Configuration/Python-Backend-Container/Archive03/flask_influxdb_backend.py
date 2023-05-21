@@ -1,6 +1,5 @@
 import json
-import influxdb_client
-import socket
+import influxdb_client, os, time
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 from flask import Flask, jsonify, request
@@ -16,9 +15,7 @@ class InfluxDB_handler:
 
         self.token = config_json["token"]
         self.org = config_json["org"]
-        self.hostname = str(socket.gethostname(config_json["hostname"]))
-        self.port = config_json["port"]
-        self.url = f"{self.hostname}:{self.port}"
+        self.url = config_json["url"]
         self.bucket = config_json["bucket"]
         self.client = influxdb_client.InfluxDBClient(
             url=self.url, token=self.token, org=self.org)

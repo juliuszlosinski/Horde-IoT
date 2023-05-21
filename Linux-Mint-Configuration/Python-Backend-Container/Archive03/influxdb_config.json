@@ -1,7 +1,6 @@
 {
 	"token": "WFP9nF-1oO7rYnq2vV-_pC3bKWNEZZd9XRN_tpYlBZzxgx35f3hNRLIb8C_6DmTB0Weq9HpCViqOu0FGqYxMvg==",
 	"org": "horde-org",
-	"hostname":"horde-influxdb",
-	"port":"8086",
+	"url": "horde-influxdb:8086",
 	"bucket": "horde-bucket"
 }
