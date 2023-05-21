@@ -22,7 +22,7 @@ cd ..
 
 Generating InfluxDB token.
 
-![Screenshot](InfluxDB-Token-Generation.png)
+![Screenshot]InfluxDB-Token.png)
 
 After generating we have to save it to the "influxdb_config.json" file!
 
